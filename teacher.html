@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="tt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вәгазь дәресләре — укытучы журналы</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#fbf9fd;color:#30243f;font:19px/1.55 Arial,"Noto Sans",sans-serif}.wrap{max-width:1400px;margin:auto;padding:18px}header{border-radius:20px 20px 5px 5px;background:linear-gradient(110deg,#3b2753,#64447e);border-bottom:6px solid #caaa74;color:#fff;padding:25px}header h1{font:700 clamp(30px,4vw,48px) Georgia,serif;margin:0 0 7px}header a{color:#fff}main{background:#fff;border:1px solid #e7ddeb;border-radius:5px 5px 20px 20px;padding:clamp(22px,4vw,48px);min-height:65vh}h2{font:700 clamp(27px,3vw,38px) Georgia,serif}label{display:grid;gap:8px;max-width:380px;font-weight:800;margin:20px 0}input,select,button{font:inherit;border-radius:12px;padding:13px 16px;border:1px solid #cfc1db}button{background:#634282;color:#fff;font-weight:800;cursor:pointer}button:disabled{opacity:.5;cursor:wait}.filters{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.filters select{min-width:200px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:14px;border-bottom:1px solid #e6ddec;text-align:left;vertical-align:top}th{background:#f2eaf8}.answer{white-space:pre-wrap;overflow-wrap:anywhere;max-width:700px}details summary{cursor:pointer;color:#634282;font-weight:800}.error{color:#a03333;font-weight:800}.status{color:#665a70}
+  </style>
+</head>
+<body><div class="wrap"><header><h1>Вәгазь дәресләре · укытучы журналы</h1><a href="index.html">← Дәресләргә кайтырга</a></header><main>
+  <section id="loginPanel"><h2>Укытучы өчен</h2><p>Җибәрелгән эшләрне карау өчен элеккеге укытучы PIN-кодын кертегез.</p><form id="loginForm"><label>PIN-код<input id="teacherPin" type="password" autocomplete="off" required></label><button type="submit">Журналны ачарга</button></form><p class="error" id="loginError" role="alert"></p></section>
+  <section id="dashboard" hidden><h2>Җибәрелгән эшләр</h2><p class="status" id="count"></p><div class="filters"><select id="groupFilter" aria-label="Группа"><option value="">Барлык группалар</option></select><select id="lessonFilter" aria-label="Дәрес"><option value="">Барлык дәресләр</option></select><button id="refreshBtn" type="button">Яңартырга</button><button id="csvBtn" type="button">CSV итеп алырга</button></div><div class="table-wrap"><table><thead><tr><th>Вакыт</th><th>Укучы</th><th>Группа</th><th>Дәрес</th><th>Эш</th></tr></thead><tbody id="rows"></tbody></table></div><p class="error" id="loadError" role="alert"></p></section>
+  </main></div><script src="teacher.js"></script></body>
+</html>
