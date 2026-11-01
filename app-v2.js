@@ -20,8 +20,11 @@
     const select = $(id);
     select.replaceChildren(new Option(placeholder, ''));
     const block = document.createElement('optgroup');
-    block.label = t('Дагват, 1 курс', 'Дагват, 1 курс');
-    for (const group of groups) block.append(new Option(isRussian ? group : group.replace('группа', 'төркем'), group));
+    block.label = t('1 курс', '1 курс');
+    for (const group of groups) {
+      const number = groups.indexOf(group) + 1;
+      block.append(new Option(t(`1 курс — ${number} төркем`, `1 курс — ${number} группа`), group));
+    }
     select.add(block);
   }
 
